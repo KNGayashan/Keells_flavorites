@@ -1,0 +1,19 @@
+@use "variables" as *;
+
+// Import Bootstrap
+@use "~bootstrap/scss/bootstrap";
+
+// Import the converted Keells styles
+@use "./keells-main.scss";
+
+// Import Inner page styles
+@use "./cheese";
+@use "./contenthub";
+@use "./delights";
+@use "./indian";
+@use "./italian";
+@use "./italy";
+@use "./korean";
+@use "./moredeli";
+@use "./singap";
+@use "./thai";

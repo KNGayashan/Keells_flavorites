@@ -1,0 +1,152 @@
+.mobile_dish_card {
+							background: $color-white;
+							border-radius: 20px;
+							padding: 30px;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							text-align: center;
+							box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+							height: 500px;
+
+							.mobile_dish_card_inner {
+								display: flex;
+								flex-direction: column;
+								align-items: center;
+								gap: 20px;
+								width: 100%;
+								height: 100%;
+								transition: transform 0.3s ease;
+
+								.mobile_dish_image_container {
+									width: auto;
+									height: 30;
+									// border-radius: 50%;
+									overflow: hidden;
+									position: relative;
+									margin: 0 auto;
+									transition: transform 0.3s ease;
+
+									.mobile_dish_image {
+										width: 100%;
+										height: 100%;
+										object-fit: contain;
+										object-position: center;
+										transition: transform 0.3s ease;
+									}
+								}
+
+								.mobile_dish_details {
+									display: flex;
+									flex-direction: column;
+									justify-content: center;
+									text-align: center;
+									flex: 1;
+
+									.mobile_dish_method {
+										font-family: "Foco-Regular";
+										font-size: 14px;
+										color: $color-green8;
+										letter-spacing: 1px;
+										font-weight: 500;
+										margin-bottom: 8px;
+									}
+
+									.mobile_dish_title {
+										font-family: "Foco-Bold";
+										font-size: calc(28px + (28 - 18) * (100vw - 320px) / 1600);
+										;
+										color: $color-black;
+										line-height: 1.2;
+										transition: all 0.3s ease;
+									}
+
+									.mobile_dish_attributes {
+										display: flex;
+										justify-content: center;
+										gap: 20px;
+										margin: 5px 0;
+
+										.mobile_dish_attribute {
+											display: flex;
+											justify-content: space-evenly;
+											align-items: center;
+											gap: 8px;
+											text-align: center;
+
+											.mobile_attribute_icon {
+												width: 60px;
+												height: 60px;
+												transition: transform 0.3s ease;
+											}
+
+											.mobile_attribute_label {
+												font-family: "Foco-Regular";
+												font-size: 22px;
+												color: $color-black;
+												font-weight: 800;
+												line-height: 1.2;
+												text-align: start;
+												margin-top: 5px;
+											}
+										}
+									}
+
+									.mobile_dish_description {
+										font-family: "Foco-Regular";
+										font-size: 14px;
+										color: rgba($color-black, 0.8);
+										line-height: 1.5;
+										margin: 10px 0;
+										transition: all 0.3s ease;
+										text-align: center;
+									}
+
+									.mobile_dish_buttons {
+										display: flex;
+										justify-content: center;
+										gap: 15px;
+										margin-top: 25px;
+
+										.mobile_dish_btn {
+											padding: 8px 16px;
+											border: none;
+											font-family: "Foco-Bold";
+											font-size: 18px;
+											font-weight: 600;
+											cursor: pointer;
+											transition: all 0.3s ease;
+											min-width: 120px;
+											border-radius: 5px;
+
+											&:hover {
+												transform: translateY(-2px);
+												box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+											}
+										}
+									}
+								}
+							}
+
+							&.prev:hover,
+							&.next:hover {
+								transform: scale(0.95);
+								opacity: 0.9;
+								box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+							}
+
+							&.active:hover {
+								transform: scale(1.02);
+								box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+
+								.mobile_dish_card_inner {
+									.mobile_dish_image_container {
+										transform: translateY(-3px);
+
+										.mobile_dish_image {
+											transform: scale(1.05);
+										}
+									}
+								}
+							}
+						}

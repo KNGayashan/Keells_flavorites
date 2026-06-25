@@ -1,0 +1,53 @@
+// Keells Color Variables
+$color-green1: #366c11;
+$color-green2: #2b6c17;
+$color-green3: #5fb246;
+$color-green4: #138807;
+$color-green5: #51ac37;
+$color-green6: #0b2f00;
+$color-green7: #41834c;
+$color-green8: #28A745;
+$color-green9: #218838;
+$color-green10: #407F4D;
+$color-yellow: #F9EB4F;
+$color-orange1: #FF9500;
+$color-orange2: #E68400;
+$color-orange3: #F0A328;
+$color-red1: #F02828;
+$color-black: #000000;
+$color-white: #ffffff;
+
+// Gradient Variables
+$color-gradient-indian: linear-gradient(180deg, #ff9a33 24%, #ffffff 100%);
+$color-gradient-italian: linear-gradient(
+	180deg,
+	#128e46 9%,
+	#97d3b0 57%,
+	#ffffff 100%
+);
+$color-gradient-thai: linear-gradient(
+	180deg,
+	#2d2a4a 0%,
+	#b4b0d8 55%,
+	#ffffff 100%
+);
+$color-gradient-singaporean: linear-gradient(
+	180deg,
+	#cd1625 0%,
+	#e7737d 55%,
+	#ffffff 100%
+);
+$color-gradient-korean: linear-gradient(
+	180deg,
+	#082d5b 0%,
+	#86a0c0 45%,
+	#ffffff 100%
+);
+$color-gradient-cheese: linear-gradient(180deg, #d89736 24%, #ffffff 100%);
+$color-gradient-other: linear-gradient(180deg, #de2910 24%, #ffffff 100%);
+
+// Typography
+$font-beauty-wind: "Beauty-Wind", sans-serif;
+$font-foco-regular: "Foco-Regular", sans-serif;
+$font-foco-bold: "Foco-Bold", sans-serif;
+$font-montserrat: "Montserrat", sans-serif;
