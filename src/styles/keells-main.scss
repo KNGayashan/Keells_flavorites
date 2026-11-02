@@ -56,6 +56,12 @@
 }
 
 @font-face {
+	font-family: "Gotcha";
+	src: url("../assets/fonts/Gotcha.OTF") format("opentype");
+	font-style: normal;
+}
+
+@font-face {
 	font-family: "Montserrat";
 	src: url("../assets/fonts/Montserrat.ttf") format("truetype");
 	font-style: normal;
@@ -334,7 +340,7 @@ header {
 				.highlight_text {
 					font-size: calc(100px + (286 - 100) * ((100vw - 320px) / (1920 - 320)));
 					color: #366c11;
-					font-family: "Beauty-Wind", sans-serif;
+					font-family: "Gotcha", sans-serif;
 					opacity: 0;
 				}
 
@@ -1047,11 +1053,12 @@ header.header-scrolled {
 }
 
 .indian-section .cuisine-title {
-	font-family: "Foco-Bold", sans-serif;
+	font-family: "Gotcha", sans-serif;
 	color: var(--color-white);
 	font-size: calc(100px + (300 - 100) * ((100vw - 320px) / (1920 - 320)));
 	line-height: 0.6;
 	margin-left: -10px;
+	color:#83470A;
 }
 
 .indian-section .cuisine-subtitle {
@@ -1135,11 +1142,12 @@ header.header-scrolled {
 }
 
 .italian-section .cuisine-title {
-	font-family: "Foco-Bold", sans-serif;
+	font-family: "Gotcha", sans-serif;
 	color: var(--color-white);
 	font-size: calc(100px + (300 - 100) * ((100vw - 320px) / (1920 - 320)));
 	line-height: 0.6;
 	margin-left: -10px;
+	color:#064A22;
 }
 
 .italian-section .cuisine-subtitle {
@@ -1224,11 +1232,12 @@ header.header-scrolled {
 }
 
 .thai-section .cuisine-title {
-	font-family: "Foco-Bold", sans-serif;
+	font-family: "Gotcha", sans-serif;
 	color: var(--color-white);
 	font-size: calc(128px + (300 - 128) * ((100vw - 320px) / (1920 - 320)));
 	line-height: 0.6;
 	margin-left: -10px;
+	color:#252341;
 }
 
 .thai-section .cuisine-subtitle {
@@ -1316,17 +1325,18 @@ header.header-scrolled {
 }
 
 .singaporean-section .cuisine-title {
-	font-family: "Foco-Bold", sans-serif;
+	font-family: "Gotcha", sans-serif;
 	color: var(--color-white);
-	font-size: calc(64px + (150 - 64) * ((100vw - 320px) / (1920 - 320)));
+	font-size: calc(72px + (200 - 72) * ((100vw - 320px) / (1920 - 320)));
 	line-height: 0.6;
 	margin-left: -10px;
+	color:#600910;
 }
 
 .singaporean-section .cuisine-subtitle {
 	font-family: "Foco-Regular", sans-serif;
 	color: var(--color-white);
-	font-size: clamp(30px, 7vw, 110px);
+	font-size: calc(36px + (96 - 36) * ((100vw - 320px) / (1920 - 320)));
 	margin: 0;
 	line-height: 1.1;
 	font-weight: 600;
@@ -1404,11 +1414,12 @@ header.header-scrolled {
 }
 
 .korean-section .cuisine-title {
-	font-family: "Foco-Bold", sans-serif;
+	font-family: "Gotcha", sans-serif;
 	color: var(--color-white);
 	font-size: calc(90px + (250 - 90) * ((100vw - 320px) / (1920 - 320)));
 	line-height: 0.6;
 	margin-left: -10px;
+	color:#0A2546;
 }
 
 .korean-section .cuisine-subtitle {
@@ -1496,9 +1507,17 @@ header.header-scrolled {
 .specialtycheese-section .cuisine-title {
 	font-family: "Foco-Bold", sans-serif;
 	color: var(--color-white);
-	font-size: calc(75px + (210 - 75) * ((100vw - 320px) / (1920 - 320)));
+	font-size: calc(48px + (100 - 48) * ((100vw - 320px) / (1920 - 320)));
 	line-height: 1;
 	margin-left: 0px;
+}
+
+.specialtycheese-section .cuisine-title .cheese-word {
+	font-family: "Gotcha", sans-serif;
+	display: block;
+	font-size: calc(96px + (280 - 96) * ((100vw - 320px) / (1920 - 320)));
+	line-height: 0.85;
+	color: #7a5416;
 }
 
 .specialtycheese-section .cuisine-subtitle {
@@ -1594,7 +1613,7 @@ header.header-scrolled {
 .moredelights-section .cuisine-title {
 	font-family: "Foco-Bold", sans-serif;
 	color: var(--color-white);
-	font-size: calc(40px + (180 - 40) * ((100vw - 320px) / (1920 - 320)));
+	font-size: calc(40px + (100 - 40) * ((100vw - 320px) / (1920 - 320)));
 	line-height: 0.9;
 	margin-left: 0px;
 	z-index: 100;
@@ -1602,13 +1621,23 @@ header.header-scrolled {
 	/* animation: fadeInFromBottom 0.8s ease-out forwards; */
 }
 
+.moredelights-section .delights-word {
+	font-family: "Gotcha", sans-serif;
+	display: block;
+	font-size: calc(96px + (280 - 96) * ((100vw - 320px) / (1920 - 320)));
+	line-height: 0.85;
+	margin: 0;
+	color: #741508;
+}
+
 .moredelights-section .cuisine-subtitle {
 	font-family: "Foco-Regular", sans-serif;
 	color: var(--color-white);
-	font-size: calc(16px + (48 - 16) * ((100vw - 320px) / (1920 - 320)));
+	font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
 	margin: 0;
 	line-height: 1;
 	margin-top: 20px;
+	padding-left: calc(16px + (200 - 16) * ((100vw - 320px) / (1920 - 320)));
 	font-weight: 600;
 	position: relative;
 	z-index: 2;
@@ -2196,13 +2225,12 @@ footer .footer-lower-right .copyright-text {
 	}
 
 	.singaporean-section .cuisine-title {
-		font-size: clamp(50px, 16vw, 200px);
 		margin-left: 0px;
 	}
 
-	.specialtycheese-section .cuisine-title {
-		font-size: clamp(50px, 20vw, 200px);
-	}
+	// .specialtycheese-section .cuisine-title {
+	// 	font-size: clamp(50px, 20vw, 200px);
+	// }
 
 	.moredelights-section {
 		height: 85vh;
