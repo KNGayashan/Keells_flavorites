@@ -136,7 +136,6 @@ class ParallaxEffects {
 			".indian-section .cuisine-img",
 			".italian-section .cuisine-img2",
 			".thai-section .cuisine-img",
-			".singaporean-section .cuisine-img2",
 			".korean-section .cuisine-img",
 			".specialtycheese-section .cuisine-img2",
 		];
@@ -333,7 +332,6 @@ class ParallaxEffects {
 			".indian-section",
 			".italian-section",
 			".thai-section",
-			".singaporean-section",
 			".korean-section",
 			".specialtycheese-section",
 		];
@@ -849,9 +847,8 @@ class ScrollAnimations {
 			{ selector: ".indian-section", direction: "left" },
 			{ selector: ".italian-section", direction: "right" },
 			{ selector: ".thai-section", direction: "left" },
-			{ selector: ".singaporean-section", direction: "right" },
-			{ selector: ".korean-section", direction: "left" },
-			{ selector: ".specialtycheese-section", direction: "right" },
+			{ selector: ".korean-section", direction: "right" },
+			{ selector: ".specialtycheese-section", direction: "left" },
 		];
 
 		cuisineSections.forEach(({ selector, direction }) => {

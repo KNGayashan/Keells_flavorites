@@ -18,7 +18,6 @@ module.exports = (env, argv) => {
       indian: "./src/js/indian.js",
       italian: "./src/js/italian.js",
       thai: "./src/js/thai.js",
-      singap: "./src/js/singap.js",
       korean: "./src/js/korean.js",
       cheese: "./src/js/cheese.js",
       moredeli: "./src/js/moredeli.js",
@@ -139,12 +138,6 @@ module.exports = (env, argv) => {
         template: "./src/moredeli.html",
         filename: "moredeli.html",
         chunks: ["moredeli", "styles"],
-        inject: true
-      }),
-      new HtmlWebpackPlugin({
-        template: "./src/singap.html",
-        filename: "singap.html",
-        chunks: ["singap", "styles"],
         inject: true
       }),
       new HtmlWebpackPlugin({

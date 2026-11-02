@@ -25,6 +25,8 @@ All product and dish data lives in [`src/js/constants.js`](src/js/constants.js) 
 
 Each dish object has `title`, `filepath`, `videopath`, `spiceLevel`, `fullnessLevel`, `description`, `Ingredients`, and `steps` (with optional `substeps`).
 
+**Recipe buttons are matched by title, not by an explicit id.** In the cuisine HTML pages, each "Quick Recipe" button carries `data-dish-id` and `data-cuisine`. `initializeModalHandlers` finds the dish with `d.title.toLowerCase().replace(/\s+/g, "") === dishId`. So the `data-dish-id` must be the dish title lowercased with all whitespace removed (punctuation kept, e.g. `tomato&pestobruschetta`). A mismatch silently opens the wrong popup (or none), and copy-pasted cards are the usual cause. Those buttons are hand-written in the HTML, so check them when adding or renaming a dish.
+
 ### Shared rendering layer
 
 Two shared modules handle all DOM work:
@@ -41,13 +43,17 @@ Each cuisine JS file (e.g., [`src/js/indian.js`](src/js/indian.js)) is a thin wr
 
 The homepage [`src/js/index.js`](src/js/index.js) is different — it handles the landing page with `ParallaxEffects`, `ScrollAnimations`, `HeaderAnimations`, and `PerformanceOptimizer` classes using GSAP + ScrollTrigger.
 
+### Homepage cuisine sections
+
+[`src/index.html`](src/index.html) stacks one `<section class="<cuisine>-section">` per cuisine, each followed by a `.cuisine-mobile` image block. Desktop layout **alternates** text-left / image-left from section to section. Image-left sections put the image column first and add `cuisine-mobile-invert` to the row (so mobile shows text on top). Per-section styling (gradient, line-art, image offset `left`/`right`) is in `keells-main.scss`, and the slide-in direction lists in `index.js` (`cuisineSections`, `cuisineImages`, `mobileCuisineImages`) are keyed by section selector and tolerate missing sections. When hiding or adding a section, re-flip neighbours so the alternation is preserved and update those lists.
+
 ### Webpack entry points
 
-Each page has its own JS chunk plus the shared `styles` chunk. The webpack config in [`webpack.config.js`](webpack.config.js) maps each HTML template to its chunk via `HtmlWebpackPlugin`. Production builds use content hashes; dev builds use plain names.
+Each page has its own JS chunk plus the shared `styles` chunk. Every page is listed by hand: an entry key plus a `HtmlWebpackPlugin` whose `template` must exist on disk, so deleting an HTML page without removing its plugin block breaks the build. Links to a removed page (`./singap.html` currently appears in the other pages' nav menus) are not checked by the build. The webpack config in [`webpack.config.js`](webpack.config.js) maps each HTML template to its chunk via `HtmlWebpackPlugin`. Production builds use content hashes; dev builds use plain names.
 
 ### Styles
 
-All SCSS is compiled as a single bundle through [`src/styles/main.scss`](src/styles/main.scss). Variables are in [`src/styles/_variables.scss`](src/styles/_variables.scss). Each cuisine has its own partial (e.g., `_indian.scss`). Bootstrap 5 is imported via SCSS.
+All SCSS is compiled as a single bundle through [`src/styles/main.scss`](src/styles/main.scss). Variables are in [`src/styles/_variables.scss`](src/styles/_variables.scss). Each cuisine has its own partial (e.g., `_indian.scss`). Bootstrap 5 is imported via SCSS. The homepage and shared header/footer styles live in [`keells-main.scss`](src/styles/keells-main.scss), which is also where all `@font-face` rules are declared (Beauty-Wind, Foco, Montserrat, Gotcha — font files in `src/assets/fonts`).
 
 ### Animation system
 

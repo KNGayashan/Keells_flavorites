@@ -1456,7 +1456,7 @@ header.header-scrolled {
 	height: auto;
 	width: 110%;
 	position: absolute;
-	right: -60%;
+	left: -60%;
 	transform: scale(1.3);
 	z-index: 1;
 	filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 1));
@@ -1553,7 +1553,7 @@ header.header-scrolled {
 	height: auto;
 	width: 110%;
 	position: absolute;
-	left: -50%;
+	right: -50%;
 	transform: scale(1.3);
 	z-index: 1;
 	filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 1));
